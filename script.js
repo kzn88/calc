@@ -89,16 +89,15 @@ ravno.addEventListener('click',function(){
 window.B=Number(pole.value);
 otvet.value=otvet.value+window.B+'=';
 if (window.plus===1) {
-pole.value= window.A+window.B;
-window.plus===0}
+pole.value= window.A+window.B;}
 if (window.minus===1) {
-    pole.value= window.A-window.B;
-    window.minus===0}
+    pole.value= window.A-window.B;}
     if (window.umn===1) {
-        pole.value= window.A*window.B;
-        window.minus===0
-    }
+        pole.value= window.A*window.B;}
         if (window.razdel===1) {
-            pole.value= window.A/window.B;
-            window.razdel===0} 
+            pole.value= window.A/window.B;} 
+window.plus=0;
+window.minus=0;
+window.umn=0;
+window.razdel=0
 })
