@@ -57,9 +57,8 @@ buttonAC.addEventListener('click', function() {
     otvet.value='';
 });
 
-plus.addEventListener('click',function plas(){
+plus.addEventListener('click',function (){
 window.A = Number(pole.value);
-console.log(window.A);
 pole.value='';
 window.plus=1;
 otvet.value=window.A + '+';
@@ -88,69 +87,18 @@ otvet.value=window.A + '/';
 
 ravno.addEventListener('click',function(){
 window.B=Number(pole.value);
-console.log(window.B);
 otvet.value=otvet.value+window.B+'=';
 if (window.plus===1) {
-pole.value= window.A+window.B}
+pole.value= window.A+window.B;
+window.plus===0}
 if (window.minus===1) {
-    pole.value= window.A-window.B}
+    pole.value= window.A-window.B;
+    window.minus===0}
     if (window.umn===1) {
-        pole.value= window.A*window.B}
+        pole.value= window.A*window.B;
+        window.minus===0
+    }
         if (window.razdel===1) {
-            pole.value= window.A/window.B} 
+            pole.value= window.A/window.B;
+            window.razdel===0} 
 })
-
-
-
-
-
-// plus.addEventListener('click', function () {
-// let A = Number(document.querySelector('input').value);
-// window.A=A;
-// document.querySelector('input').value='';
-
-// ravno.addEventListener('click', function() {
-//     let B = Number(document.querySelector('input').value);
-//     window.B=B;
-//     console.log (B);
-//     let C = A + B;
-//     window.C=C;
-//     document.querySelector('input').value = window.A+window.B;
-//     console.log (C);
-//     })  
-// });
-// -
-// minus.addEventListener('click', function () {
-//     let A = Number(document.querySelector('input').value);
-//     document.querySelector('input').value=''
-    
-    
-//     ravno.addEventListener('click', function() {
-//         let B = Number(document.querySelector('input').value);
-//         let C = A - B;
-//         document.querySelector('input').value = C;   
-//         })
-//     });
-// // *
-// umn.addEventListener('click', function () {
-//     let A = Number(document.querySelector('input').value);
-//     document.querySelector('input').value=''
-    
-    
-//     ravno.addEventListener('click', function() {
-//         let B = Number(document.querySelector('input').value);
-//         let C = A * B;
-//         document.querySelector('input').value = C;    
-//         })
-//     });
-// // /
-// razdel.addEventListener('click', function () {
-//     let A = Number(document.querySelector('input').value);
-//     document.querySelector('input').value=''
-    
-    
-//     ravno.addEventListener('click', function() {
-//         let B = Number(document.querySelector('input').value);
-//         let C = A / B;   
-//         })
-//     });
