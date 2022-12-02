@@ -85,14 +85,28 @@ border: 0px;
 }
 button:hover {
     background-color: aqua;
+    cursor: pointer;
 }
 button {
     font-size: 2em;
     border-radius: 5%;
+    background-color: rgba(241, 217, 220, 1);
+}
+button:active {
+    transform: translateY(4px);
 }
 .pole:focus{
     border: 0px;
     box-shadow: none;
+}
+.code {
+    color:rgb(204, 192, 18);
+    padding-bottom: 10px;
+}
+.code>a {
+    text-decoration: none;
+    color:rgb(204, 192, 18);
+    font-weight: bold;
 }
 @supports (object-fit: cover) {  
     #fon {    
