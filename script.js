@@ -17,15 +17,13 @@ const razdel= document.querySelector('.razdel');
 const pole= document.querySelector('.pole');
 const otvet= document.querySelector('.otvet');
 
-// document.addEventListener('keydown', function() {
-//     if (event.code === 'Numpad1') {if (window.ravno===1) {
-//         obnul()
-//     }
-//     document.querySelector('input').value=document.querySelector('input').value +'1';}
-//   });
+function obnul () {
+    pole.value='';
+    window.ravno=0;    
+}
 
   document.addEventListener('keydown', function() {
-    for (i=0;i<9;i++) {
+    for (i=0;i<=9;i++) {
     if (event.code === 'Numpad'+i) {if (window.ravno===1) {
         obnul()
     }
@@ -55,7 +53,8 @@ const otvet= document.querySelector('.otvet');
         pole.value='';
         window.plus=1;
         otvet.value=window.A + '+';}
-    if (event.code === 'NumpadEnter') {if (window.ravno===1) {obnul()
+    if (event.code === 'NumpadEnter') {
+        if (window.ravno===1) {obnul()
         otvet.value=''}
         else {
         window.B=Number(pole.value);
@@ -73,15 +72,11 @@ const otvet= document.querySelector('.otvet');
         window.minus=0;
         window.umn=0;
         window.razdel=0;
-        window.ravno=1;}}
+                }
+}
 }
   );
 
-
-function obnul () {
-    pole.value='';
-    window.ravno=0;    
-}
 
 let regexp=/[A-Za-zA-Яф-яЁё!@#$%^&*()_]/g;
 pole.addEventListener('input', function(){
